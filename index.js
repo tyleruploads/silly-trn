@@ -20,7 +20,9 @@ Available Commands:
 /silly-trn-help  - The command you just ran
 /silly-trn-ping  - Check bot latency
 /silly-trn-time  - Everyone wants to see the time, right?
-/silly-trn-quote - Get an awesome quote from Silly TRN!`
+/silly-trn-quote - Get an awesome quote from Silly TRN!
+/silly-trn-say   - Makes Silly TRN Say Someting
+/silly-trn-add   - Add two numbers`
     });
 });
 
@@ -47,6 +49,34 @@ app.command("/silly-trn-quote", async ({ ack, respond }) => {
     } catch (err) {
         await respond({ text: `Silly TRN Will NOT give you a quote! He is too tired.\n${err}` });
     }
+});
+
+app.command("/silly-trn-say", async ({ command, ack, respond }) => {
+    await ack();
+
+    // Get the text typed by the user after the command
+    const userInput = command.text;
+
+    if (!userInput) {
+        await respond({ text: "Please, write something for me to say!" });
+    }
+
+    await respond({ text: `${userInput}` });
+});
+
+app.command("/silly-trn-add", async ({ command, ack, respond }) => {
+    await ack();
+
+    // Get the text typed by the user after the command
+    const userInput = command.text;
+
+    if (!userInput) {
+        await respond({ text: "Please, give me the numbers to add" });
+    }
+
+    numbers = userInput.split(' ');
+
+    await respond({ text: `Silly TRN is unable to add ${numbers[0]} and ${numbers[1]}` });
 });
 
 (async () => {
