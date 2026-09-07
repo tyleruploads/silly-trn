@@ -9,7 +9,7 @@
 | /silly-trn-time | Everyone wants to see the time, right? |
 | /silly-trn-quote | Get an awesome quote from Silly TRN! |
 | /silly-trn-say | Makes Silly TRN Say Someting |
-| /silly-trn-add | Add two numbers |
+| /silly-trn-add | DOES NOT ADD TWO NUMBERS—Silly TRN does not know how. |
 
 ## Usage
 Go to the Hack Club slack, find an appropriate channel, and run any one of the commands in the table above.
